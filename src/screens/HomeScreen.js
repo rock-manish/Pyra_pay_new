@@ -41,10 +41,11 @@
 
 // export default Pyrapay;
 
-import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
+import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native';
+import DMTone from './DMTone';
 
-const HomeScreen = (Navigation) => {
+function HomeScreen ({navigation}) {
   return (
     <View style={{backgroundColor: '#f0f8ff'}}>
       <ScrollView>
@@ -66,7 +67,7 @@ const HomeScreen = (Navigation) => {
               }}>
               <TouchableOpacity>
                 <View style={{flexDirection: 'row'}}>
-                  <Text style={{color: 'white', fontSize: 30, marginLeft: 10,}}>
+                  <Text style={{color: 'white', fontSize: 30, marginLeft: 10}}>
                     0
                   </Text>
                   <Image
@@ -81,7 +82,15 @@ const HomeScreen = (Navigation) => {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity>
-              <Text style={{color: 'white',marginTop:20,textAlign:"center",fontWeight:'bold'}}>Main Wallet</Text>
+                <Text
+                  style={{
+                    color: 'white',
+                    marginTop: 20,
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                  }}>
+                  Main Wallet
+                </Text>
               </TouchableOpacity>
             </View>
             <View
@@ -93,7 +102,7 @@ const HomeScreen = (Navigation) => {
                 borderRadius: 3,
                 elevation: 50,
               }}>
-                <TouchableOpacity>
+              <TouchableOpacity>
                 <View style={{flexDirection: 'row'}}>
                   <Text style={{color: 'white', fontSize: 30, marginLeft: 10}}>
                     0
@@ -110,9 +119,17 @@ const HomeScreen = (Navigation) => {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity>
-              <Text style={{color: 'white',marginTop:20,textAlign:"center",fontWeight:'bold'}}>Aeps Wallet</Text>
+                <Text
+                  style={{
+                    color: 'white',
+                    marginTop: 20,
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                  }}>
+                  Aeps Wallet
+                </Text>
               </TouchableOpacity>
-              </View>
+            </View>
 
             <View
               style={{
@@ -122,7 +139,7 @@ const HomeScreen = (Navigation) => {
                 borderRadius: 3,
                 elevation: 50,
               }}>
-                <TouchableOpacity>
+              <TouchableOpacity>
                 <View style={{flexDirection: 'row'}}>
                   <Text style={{color: 'white', fontSize: 30, marginLeft: 10}}>
                     0
@@ -139,9 +156,17 @@ const HomeScreen = (Navigation) => {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity>
-              <Text style={{color: 'white',marginTop:20,textAlign:"center",fontWeight:'bold'}}>Matm Wallet</Text>
+                <Text
+                  style={{
+                    color: 'white',
+                    marginTop: 20,
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                  }}>
+                  Matm Wallet
+                </Text>
               </TouchableOpacity>
-              </View>
+            </View>
           </View>
           <Text
             style={{
@@ -178,9 +203,10 @@ const HomeScreen = (Navigation) => {
                   elevation: 20,
                   borderRadius: 4,
                 }}>
-                <TouchableOpacity onPress={() => {
-          navigation.navigate("Account");
-        }}>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate('DMTone');
+                  }}>
                   <Image
                     style={{height: 50, width: 50}}
                     source={require('../image/DMT-1.png')}
@@ -220,7 +246,7 @@ const HomeScreen = (Navigation) => {
                   elevation: 20,
                   borderRadius: 4,
                 }}>
-                <TouchableOpacity>
+                <TouchableOpacity >
                   <Image
                     style={{height: 50, width: 50}}
                     source={require('../image/mobile.png')}
@@ -267,7 +293,9 @@ const HomeScreen = (Navigation) => {
                   elevation: 20,
                   borderRadius: 4,
                 }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                    navigation.navigate('DMTone');
+                  }}>
                   <Image
                     style={{height: 50, width: 50}}
                     source={require('../image/DMT-1.png')}
@@ -308,7 +336,9 @@ const HomeScreen = (Navigation) => {
                   elevation: 20,
                   borderRadius: 4,
                 }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                    navigation.navigate('MatmSecond');
+                  }}>
                   <Image
                     style={{height: 50, width: 50}}
                     source={require('../image/mobile.png')}
@@ -331,7 +361,7 @@ const HomeScreen = (Navigation) => {
                 }}>
                 <TouchableOpacity>
                   <Image
-                    style={{height: 40, width: 40,marginLeft:15}}
+                    style={{height: 40, width: 40, marginLeft: 15}}
                     source={require('../image/adhar.png')}
                   />
                   <Text style={{textAlign: 'center'}}>Adhaar Pay</Text>
@@ -407,7 +437,7 @@ const HomeScreen = (Navigation) => {
             </View>
           </View>
         </View>
-        
+
         <View style={{marginLeft: 20, marginTop: 10}}>
           <Text
             style={{
