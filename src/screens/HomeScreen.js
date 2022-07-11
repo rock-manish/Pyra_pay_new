@@ -475,12 +475,14 @@ function HomeScreen ({navigation}) {
                   elevation: 20,
                   borderRadius: 4,
                 }}>
-                <TouchableOpacity>
+                <TouchableOpacity  onPress={() => {
+                    navigation.navigate('Reacharge');
+                  }}>
                   <Image
                     style={{height: 50, width: 50}}
                     source={require('../image/r.png')}
                   />
-                  <Text style={{textAlign: 'center'}}>MObile</Text>
+                  <Text style={{textAlign: 'center'}}>Mobile</Text>
                 </TouchableOpacity>
               </View>
             </View>
